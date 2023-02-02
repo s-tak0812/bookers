@@ -1,2 +1,26 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<h1>Books</h1>
+
+<table class="book-list">
+  <tr class="book-category">
+    <th>title</th>
+    <th>body</th>
+    <th></th>
+  </tr>
+
+  <tr>
+    <td class="book-title">
+      <%= book.each book.title do |f| %>
+      <% end %>
+    </td>
+    <td>
+      <%= book.each book.body do |f| %>
+      <% end %>
+    </td>
+    <td class="bool-control">
+      <!--show-->
+
+      <!--edit-->
+      <!--destroy-->
+    </td>
+  </tr>
+</table>
