@@ -42,16 +42,19 @@
 </table>
 
 <div class="book-box">
-  <h4>New book</h4>
+
+  <h2>New book</h2>
 
   <%= form_with model:Book.new do |f| %>
-    <p class="form">title</p>
+    <p class="form">Title</p>
     <%= f.text_field :title %>
 
     <p class="form">Body</p>
     <%= f.text_area :body %>
 
-    <%= f.submit "Create Book" %>
+    <div class="submit">
+      <%= f.submit "Create Book" %>
+    </div>
 
   <% end %>
 

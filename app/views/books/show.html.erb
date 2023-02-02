@@ -1,20 +1,22 @@
-<div class="flash-notice">
+<div class="flash">
   <%= flash[:notice] %>
 </div>
 
-<p>
-  title:
-  <span>
+<p class="show-category">
+  Title:
+  <span class="category">
     <%= @book.title %>
   </span>
 </p>
 
-<p>
-  body:
-  <span>
+<p class="show-category">
+  Body:
+  <span class="category">
     <%= @book.body %>
   </span>
 </p>
 
-<%= link_to "Edit", edit_book_path(@book.id) %>
-<a href='/books'>Back</a>
+<p class="show-submit">
+  <%= link_to "Edit", edit_book_path(@book.id) %> |
+  <a href='/books'>Back</a>
+</p>

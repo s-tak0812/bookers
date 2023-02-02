@@ -14,7 +14,7 @@ class BooksController < ApplicationController
       flash[:notice] = "Book was successfully updated."
       redirect_to book_path(book.id)
     else
-      render '/books'
+      redirect_to '/books'
     end
   end
 
@@ -34,7 +34,7 @@ class BooksController < ApplicationController
       flash[:notice] = "Book was successfully updated."
       redirect_to book_path(book.id)
     else
-      render '/books'
+      redirect_to edit_book_path(book.id)
     end
   end
 

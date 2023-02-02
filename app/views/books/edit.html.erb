@@ -4,17 +4,21 @@
 <div class="book-box">
 
   <%= form_with model:@book do |f| %>
-    <p class="form">title</p>
+    <p class="form">Title</p>
     <%= f.text_field :title %>
 
     <p class="form">Body</p>
     <%= f.text_area :body %>
 
-    <%= f.submit "Update Book" %>
+    <p class="update-submit">
+      <%= f.submit "Update Book" %>
+    </p>
 
   <% end %>
 
 </div>
 
-<%= link_to "Show", book_path(@book.id) %>
-<a href='/books'>Back</a>
+<p class="edit-snd-submit">
+  <%= link_to "Show", book_path(@book.id) %> |
+  <a href='/books'>Back</a>
+</p>
