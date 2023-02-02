@@ -21,8 +21,11 @@
 }
 
 body{
-  margin: 33px
+  margin: 33px;
 }
+
+
+/*top*/
 
 h1{
   font-size: 32px;
@@ -38,3 +41,8 @@ p{
   line-height: 18px;
 }
 
+/*index*/
+
+.book-title, .book-body, .book-control{
+  padding: 1px 5px 7px 5px;
+}

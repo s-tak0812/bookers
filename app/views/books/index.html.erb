@@ -2,25 +2,46 @@
 
 <table class="book-list">
   <tr class="book-category">
-    <th>title</th>
-    <th>body</th>
+    <th>Title</th>
+    <th>Body</th>
     <th></th>
   </tr>
 
-  <tr>
-    <td class="book-title">
-      <%= book.each book.title do |f| %>
-      <% end %>
-    </td>
-    <td>
-      <%= book.each book.body do |f| %>
-      <% end %>
-    </td>
-    <td class="bool-control">
-      <!--show-->
 
+  <% @books.each do |book| %>
+    <tr>
+      <td class="book-title">
+        <%= book.title %>
+      </td>
+
+      <td class="book-body">
+        <%= book.body %>
+      </td>
+  <% end %>
+
+      <td class="book-control">
+      <!--show-->
+      a
       <!--edit-->
+      b
       <!--destroy-->
-    </td>
-  </tr>
+      c
+      </td>
+    </tr>
 </table>
+
+<div class="new-book">
+  <h4>New book</h4>
+
+  <%= form_with model:Book.new do |f| %>
+    <p class="form">title</p>
+    <%= f.text_field :title %>
+
+    <p class="form">Body</p>
+    <%= f.text_area :body %>
+
+    <%= f.submit "Create Book" %>
+
+  <% end %>
+
+</div>
