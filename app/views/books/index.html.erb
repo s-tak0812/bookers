@@ -5,6 +5,8 @@
     <th>Title</th>
     <th>Body</th>
     <th></th>
+    <th></th>
+    <th></th>
   </tr>
 
 
@@ -17,17 +19,26 @@
       <td class="book-body">
         <%= book.body %>
       </td>
+
+      <!--show-->
+      <td class="book-control">
+        <%= link_to "Show", book_path(book.id) %>
+      </td>
+
+      <!--edit-->
+      <td class="book-control">
+        <%= link_to "Edit", edit_book_path(book.id) %>
+      </td>
+
+      <!--destroy-->
+      <td class="book-control">
+        <%= link_to "Destroy", book_path(book.id),method: :delete, "data-confirm" => "Are you sure?" %>
+      </td>
+
+    </tr>
+
   <% end %>
 
-      <td class="book-control">
-      <!--show-->
-      a
-      <!--edit-->
-      b
-      <!--destroy-->
-      c
-      </td>
-    </tr>
 </table>
 
 <div class="book-box">
