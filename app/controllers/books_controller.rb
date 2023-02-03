@@ -13,7 +13,7 @@ class BooksController < ApplicationController
 
     if @book.save
       flash[:notice] = "Book was successfully updated."
-      redirect_to book_path(book.id)
+      redirect_to book_path(@book.id)
     else
       redirect_to '/books'
     end
