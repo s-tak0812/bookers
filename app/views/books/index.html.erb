@@ -43,6 +43,20 @@
 
 <div class="book-box">
 
+  <% if @book.errors.any? %>
+    <div class="error-box">
+      <div class="error-count">
+        <%= @book.errors.count %> errors prohibited this book from being saved:
+      </div>
+      <ul class="error-list">
+        <% @book.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
   <h2>New book</h2>
 
   <%= form_with model:Book.new do |f| %>
