@@ -4,7 +4,6 @@ class BooksController < ApplicationController
     @book = Book.new
   end
 
-
   def new
     @book = Book.new
   end
