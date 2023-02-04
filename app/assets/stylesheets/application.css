@@ -25,6 +25,9 @@ body{
   margin: 33px;
 }
 
+a{
+  color: gray;
+}
 
 /*top*/
 
@@ -76,7 +79,7 @@ h2{
   padding-top: 10px;
 }
 
-.submit{
+.create-submit{
   padding: 10px 0;
 }
 
@@ -114,7 +117,7 @@ textarea, input{
   font-size: 13px;
 }
 
-.edit-snd-submit{
+.edit-end-submit{
   color: #666666;
   font-size: 13px;
   margin: 0;
